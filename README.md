@@ -9,13 +9,13 @@ Geothink's Open Data Standards Project Visualization provides an interactive web
 Documentation
 -------------
 
-All code in the index.HTML is commented. Documentation regarding the visualization can also be accessed via the following link: https://docs.google.com/document/d/1zdxI1uLEMevz6e7WFPQrRa4ja_toXyMETiVcEkxixEQ/edit?usp=sharing
+All code in the index.html is commented. Documentation regarding the visualization can also be accessed via the following link: https://docs.google.com/document/d/1zdxI1uLEMevz6e7WFPQrRa4ja_toXyMETiVcEkxixEQ/edit?usp=sharing
 
 
 Installation
 ------------
 
-As this project is still in its early steps, there is not public domain to access the web page; rather, if you simply download the entire code onto your Desktop and then open the index.HTML file into a browser, then the visualization can be accessed and used. 
+As this project is still in its early steps, there is not public domain to access the web page; rather, if you simply download the entire code onto your Desktop and then open the index.html file into a browser, then the visualization can be accessed and used. 
 
 Contact
 --------
