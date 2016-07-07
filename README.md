@@ -17,7 +17,7 @@ Installation
 
 As this project is still in its early steps, there is not public domain to access the web page; rather, if you simply download the entire code onto your Desktop and then open the index.HTML file into a browser, then the visualization can be accessed and used. 
 
-Contacts
+Contact
 --------
 
 Please email julia.conzon@mail.mcgill.ca if you have any questions or comments regarding the code. As this visualization is still incomplete, any feedback would be great. 
