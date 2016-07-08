@@ -1,0 +1,94 @@
+{
+  "name": "domains", 
+  "children": [
+	{
+		"name": "Annual Budget", 
+		"children": [
+			{"name":"Fiscal Data Package", "size": 10000},
+			{"name":"Socrata Open Budget Schema", "size": 10000},
+			{"name":"Vocabulario para datos sobre presupuestos de entidades locales", "size": 15000},
+			{"name": "Checkbook NYC", "size": 10000}
+		]
+	},
+	{
+		"name": "Building Permits",
+		"children": [
+			{"name": "Building & Land Development Specification (BLDS)", "size": 10000}
+		]
+	},
+	{
+		"name": "Crime Statistics", 
+		"children": [
+			{"name": "SPOTCrime Open Crime Standard (SOCS)", "size": 10000}
+		]
+	},
+	{
+		"name": "Road Construction", 
+		"children": [
+			{"name": "Open511", "size": 10000}
+		]
+	},
+	{
+		"name": "Zoning", 
+		"children": [
+			{"name": "Regional Land Information SYtem (RLIS) Discovery", "size": 10000},
+			{"name": "Land Based Classification Standards (LBCS) - OWL2", "size": 10000}
+		]
+	},
+	{
+		"name": "Service Requests", 
+		"children": [
+			{"name": "Open311: GeoReport V2 API", "size": 10000}
+		]
+	},
+	{
+		"name": "Public Facilities", 
+		"children": [
+			{"name": "Open311: Inquiry Draft API", "size": 10000}
+		]
+	},
+	{
+		"name": "Food Safety", 
+		"children": [
+			{"name": "Local Inspector Value-Entry Specification (LIVES)", "size": 10000}
+		]
+	},
+	{	
+		"name": "Address Points", 
+		"children": [
+			{"name": "OpenAddress Specification", "size": 10000}
+		]	
+	},
+	{
+		"name": "Procurement Contracts", 
+		"children": [
+			{"name": "Open Contracting Data Standards", "size": 10000},
+			{"name": "Checkbook NYC", "size": 10000}
+		]
+	},
+	{
+		"name": "Real-Time Transit", 
+		"children": [
+			{"name": "General Transit Feed Specification (GTFS)", "size": 10000},
+			{"name": "Service Interface for Real-Time Information (SIRI)", "size": 10000}
+		]
+	},
+	{
+		"name": "Expenditures", 
+		"children": [
+			{"name": "Local Government Transparency Code", "size": 10000},
+			{"name": "Checkbook NYC", "size": 10000}
+		]
+	},
+	{
+		"name": "Election Results", 
+		"children": [
+			{"name": "Open Election Data Specification V2", "size": 10000},
+			{"name": "Election Data Format", "size": 10000},
+			{"name": "Election Markup Language (EML)", "size": 10000},
+			{"name": "NIST's Common Election Format Project", "size": 10000},
+			{"name": "Voting Information Project (VIP) Specification", "size": 10000}
+		]	
+	}
+  ]
+}
