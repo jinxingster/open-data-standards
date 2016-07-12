@@ -17,7 +17,7 @@ All code in the index.html is commented. Documentation regarding the visualizati
 Installation
 ------------
 
-As this project is still in its early steps, there is no website URL to access the visualization; rather, if you simply download the entire code onto your Desktop and then open the index.html file into a browser, then the visualization can be accessed and used. 
+As this project is still in its early steps, there is no website URL to access the visualization; rather, if you download the entire file onto your Desktop and then run the python -m SimpleHTTPServer (http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python), the visualization can be accessed and used. 
 
 Contact
 --------
