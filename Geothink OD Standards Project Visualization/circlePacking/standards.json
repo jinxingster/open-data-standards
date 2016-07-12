@@ -1,0 +1,95 @@
+{
+  "name": "domains", 
+  "children": [
+	{
+		"title": "Annual Budget", 
+		"children": [
+			{"name":"Fiscal Data Package", "size": 10000, "link":"http://fiscal.dataprotocols.org/spec/#overview"},
+			{"name":"Socrata Open Budget Schema", "size": 10000, "link": "https://docs.google.com/document/d/1iUfkMB17vtANwF2z7_WnS-vPTTYdQFJRxsBbSR2WTk4/edit"},
+			{"name":"Vocabulario para datos sobre presupuestos de entidades locales", "size": 15000, "link": "http://vocab.linkeddata.es/datosabiertos/def/hacienda/presupuestos.html"},
+			{"name": "Checkbook NYC", "size": 10000, "link": "https://github.com/NYCComptroller/Checkbook"}
+		]
+	},
+	{
+		"title": "Building Permits",
+		"children": [
+			{"name": "Building & Land Development Specification (BLDS)", "size": 10000, "link":"http://permitdata.org/"}
+		]
+	},
+	{
+		"title": "Crime Statistics", 
+		"children": [
+			{"name": "SPOTCrime Open Crime Standard (SOCS)", "size": 10000, "link":"https://github.com/spotcrimebrit/SpotCrime-Open-Crime-Data-Standard"}
+		]
+	},
+	{
+		"title": "Road Construction", 
+		"children": [
+			{"name": "Open511", "size": 10000, "link":"http://www.open511.org/documentation/1.0/guidelines.html"}
+		]
+	},
+	{
+		"title": "Zoning", 
+		"children": [
+			{"name": "MassGIS Datalayer De Facto Standard", "size": 10000, "link":"http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/l3parcels.html"},
+			{"name": "Regional Land Information System (RLIS) Discovery", "size": 10000, "link":"http://rlisdiscovery.oregonmetro.gov/metadataviewer/display.cfm?meta_layer_id=416"},
+			{"name": "Land Based Classification Standards (LBCS) - OWL2", "size": 10000, "link":"https://www.planning.org/lbcs/standards/function.htm"}
+		]
+	},
+	{
+		"title": "Service Requests", 
+		"children": [
+			{"name": "Open311: GeoReport V2 API", "size": 10000, "link":"http://wiki.open311.org/GeoReport_v2/"}
+		]
+	},
+	{
+		"title": "Public Facilities", 
+		"children": [
+			{"name": "Open311: Inquiry Draft API", "size": 10000, "link":"http://wiki.open311.org/Inquiry_v1/"}
+		]
+	},
+	{
+		"title": "Food Safety", 
+		"children": [
+			{"name": "Local Inspector Value-Entry Specification (LIVES)", "size": 10000, "link":"http://www.yelp.com/healthscores"}
+		]
+	},
+	{	
+		"title": "Address Points", 
+		"children": [
+			{"name": "OpenAddress Specification", "size": 10000, "link": "https://openaddresses.io/"}
+		]	
+	},
+	{
+		"title": "Procurement Contracts", 
+		"children": [
+			{"name": "Open Contracting Data Standards", "size": 10000, "link":"http://standard.open-contracting.org/latest/en/"},
+			{"name": "Checkbook NYC", "size": 10000, "link":"https://github.com/NYCComptroller/Checkbook"}
+		]
+	},
+	{
+		"title": "Real-Time Transit", 
+		"children": [
+			{"name": "General Transit Feed Specification (GTFS)", "size": 10000, "link":"https://developers.google.com/transit/gtfs/reference"},
+			{"name": "Service Interface for Real-Time Information (SIRI)", "size": 10000, "link":"http://user47094.vs.easily.co.uk/siri/"}
+		]
+	},
+	{
+		"title": "Expenditure", 
+		"children": [
+			{"name": "Local Government Transparency Code", "size": 10000, "link": "http://www.local.gov.uk/practitioners-guides-to-publishing-data"},
+			{"name": "Checkbook NYC", "size": 10000, "link":"https://github.com/NYCComptroller/Checkbook"}
+		]
+	},
+	{
+		"title": "Election Results", 
+		"children": [
+			{"name": "Open Election Data Specification V2", "size": 10000, "link":"http://docs.openelections.net/"},
+			{"name": "Election Data Format", "size": 10000, "link":"https://github.com/theodi/election-data-format/blob/gh-pages/README.md"},
+			{"name": "Election Markup Language (EML)", "size": 10000, "link":"http://docs.oasis-open.org/election/eml/v7.0/cs01/eml-v7.0-cs01.html"},
+			{"name": "NIST's Common Election Format Project", "size": 10000, "link":"http://www.nist.gov/itl/vote/election-results.cfm"},
+			{"name": "Voting Information Project (VIP) Specification", "size": 10000, "link":"http://vip-specification.readthedocs.io/en/vip5/"}
+		]	
+	}
+  ]
+}
