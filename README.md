@@ -1,10 +1,10 @@
 # open-data-standards
-An interactive user-friendly web page that allows users to see what domain-specific data standards exist for municipal open datasets. This code is associated with Geothink's Open Data Standards Project (http://geothink.ca/open-data-standards-for-improving-city-governance/).
+An interactive user-friendly web page that allows users to see what data standards exist for high-value municipal open datasets (e.g. real time transit data). This code is associated with Geothink's Open Data Standards Project (http://geothink.ca/open-data-standards-for-improving-city-governance/).
 
 What is Geothink's Open Data Standards Project Visualization?
 -------------------------------------------------------------
 
-Geothink's Open Data Standards Project Visualization provides an interactive web page that municipal workers can use to assess a variety of domain-specific data standards while also comparing dataset information from Geothink's five partnered cities' domain-specific datasets to see any discrepencies that exist between guidelines in a standard (e.g. differences in file formats). The five partnered cities include the following: City of Vancouver, BC, City of Toronto, ON, City of Surrey, BC, City of Edmonton, AB, and City of Ottawa, ON. Data is pulled from two different Fusion Tables that were modified from two original dashboards. The original two dashboards and their descriptions can be accessed via this link: http://geothink.ca/open-data-standards-for-improving-city-governance/. These two original dashboards are difficult to use by municipal open data employees, thus this visualization aims to rework the dashboards into a more user-friendly and interactive tool. Currently the two Fusion Tables are inaccessible to the public as this visualization is still a work in progress.
+Geothink's Open Data Standards Project Visualization provides an interactive web page that municipal workers can use to assess a variety of standards for high-value municipal open datasets while also comparing dataset properties from Geothink's five partnered cities' high-value datasets to see any discrepencies that exist between guidelines in a standard (e.g. differences in file formats). The five partnered cities include the following: City of Vancouver, BC, City of Toronto, ON, City of Surrey, BC, City of Edmonton, AB, and City of Ottawa, ON. Data is pulled from two different Fusion Tables that were modified from two original dashboards. The original two dashboards and their descriptions can be accessed via this link: http://geothink.ca/open-data-standards-for-improving-city-governance/. These two original dashboards are difficult to use by municipal open data employees, thus this visualization aims to rework the dashboards into a more user-friendly and interactive tool. Currently the two Fusion Tables are inaccessible to the public as this visualization is still a work in progress.
 
 Documentation
 -------------
@@ -15,7 +15,7 @@ All code in the index.html is commented. Documentation regarding the visualizati
 Installation
 ------------
 
-As this project is still in its early steps, there is not public domain to access the web page; rather, if you simply download the entire code onto your Desktop and then open the index.html file into a browser, then the visualization can be accessed and used. 
+As this project is still in its early steps, there is no website URL to access the visualization; rather, if you simply download the entire code onto your Desktop and then open the index.html file into a browser, then the visualization can be accessed and used. 
 
 Contact
 --------
