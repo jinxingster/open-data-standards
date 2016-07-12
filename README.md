@@ -1,4 +1,6 @@
-# open-data-standards
+Geothink's Open Data Standards Project Visualization
+----------------------------------------------------
+
 An interactive user-friendly web page that allows users to see what data standards exist for high-value municipal open datasets (e.g. real time transit data). This code is associated with Geothink's Open Data Standards Project (http://geothink.ca/open-data-standards-for-improving-city-governance/).
 
 What is Geothink's Open Data Standards Project Visualization?
