@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Geothink's Open Data Standards Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<style>
+		body {
+			height: 100vh;
+			height: 100vh;
+		}
+		#outputStandards {
+			display: none;
+		}
+		#output1{
+			display:none;
+		}
+		#output2{
+			display:none;
+			vertical-align: top;
+		}
+		.carousel-indicators li {
+			background-color: #cccccc;
+		}
+		.carousel-indicators .active {
+			background-color: #cccccc;
+		}
+		.carousel-caption {
+			color: #cccccc;
+			text-decoration:none;
+			bottom: -4px;
+			text-shadow: none;
+		}
+		.visualization-caption {
+			color: #000000;
+			text-decoration:none;
+			text-shadow: none;
+		}
+		.carousel-indicators {
+			bottom:-15px;
+		}
+		.carousel-inner {
+			margin-bottom:50px;
+		}
+		.table th{
+			text-align: center;
+		}
+		.table td{
+			text-align: center;
+		}
+		#tableLegend {
+			text-align: center;
+		}
+		#cityDatasetsInfo {
+			vertical-align: top;
+		}
+		#cityComparisonInfo {
+			vertical-align: top;
+		}
+		#wellSizeL {
+			width: 49%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#wellSizeR {
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+		}
+		#userFeedback {
+			display: none;
+		}
+		#feedbackSuccess {
+			display: none;
+		}
+		#feedbackFailure {
+			display: none;
+		}
+		#feedbackWarning {
+			display: none;
+		}
+		.fileStructuration + .tooltip > .tooltip-inner {
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+		#userFeedbackHeader :hover {
+			color: #028391; 
+		}
+		.fileStructuration :hover {
+			transform: scale(1.2, 1.2);
+			opacity: 1;
+		}
+		.geothinkLogo :hover {
+			transform: scale(1.2, 1.2);
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	
+    <!-- Header storyboard -->
+    <header id="storyboard" class="carousel slide" style="height: 500px;">
+        <!-- Indicators (arrows) for storyboard -->
+        <ol class="carousel-indicators">
+            <li data-target="#storyboard" data-slide-to="0" class="active"></li>
+            <li data-target="#storyboard" data-slide-to="1"></li>
+            <li data-target="#storyboard" data-slide-to="2"></li>
+			<li data-target="#storyboard" data-slide-to="3"></li>
+			<li data-target="#storyboard" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active" align='middle' height='100%' width='100%'> <!-- slide 0 -->
+                <img src='https://docs.google.com/drawings/d/1zhQHRyugHRxxm4sRtYo5dZcoI9sm9EKf2ManzQyq3RM/pub?w=1500&h=1100' class="img-responsive" alt="Introduction Slide">
+                <div class="carousel-caption">
+					<a href="http://geothink.ca/open-data-standards-for-improving-city-governance/" target="_blank"><font color="#0283b0"><h3>FOR MORE INFORMATION ABOUT THE PROJECT CLICK HERE</h3></font></a>
+                </div>
+            </div>
+			<div class="item" align='middle' height='100%' width='100%'> <!-- slide 1 -->
+                <img src='https://docs.google.com/drawings/d/1sS1QStsd35klx0ijFVr0z8YMNDnA2ZNrQNTnRHLADOA/pub?w=1500&h=1100' class="img-responsive" alt="Instruction Slide">
+				<div class="carousel-caption">
+					<font color="#0283b0"><h3>CLICK ON THE RIGHT ARROW TO LEARN MORE ABOUT OPEN DATA STANDARDS</h3></font>
+                </div>
+			</div>
+			<div class="item" align='middle' height='100%' width='100%'> <!-- slide 2 -->
+                <img src='https://docs.google.com/drawings/d/1Qky1ST6vt7DlalP6X_EdKbUs6CCwqwbJ2C2wdd2-IR0/pub?w=1500&h=1100' class="img-responsive" alt="Definition Slide">
+                <div class="carousel-caption">
+					<a href="https://docs.google.com/document/d/1T2-fVOb_l3QD8sBTpEpubFSzWi2qAkwEdPIz1JhJrWU/edit?usp=sharing" target="_blank"><font color="#0283b0"><h3>RACHEL BLOOM'S "OPEN CIVIC DATA STANDARDS IN CANADA"</h3></font></a>
+                </div>
+            </div>
+			<div class="item" align='middle' height='100%' width='100%'> <!-- slide 3 -->
+                <img src='https://docs.google.com/drawings/d/10DU2c3lbUdUlnCOP3pI95kaap4npW9HpA7IFN93CANk/pub?w=1500&h=1100' class="img-responsive" alt="GTFS Case Study Slide">
+            </div>
+			<div class="item" align='middle' height='100%' width='100%'> <!-- slide 4 -->
+				<div class="visualization-caption">
+					<br/><font color="#000000" size="5"><strong>CLICK TO SEE WHAT OPEN DATA STANDARDS EXIST FOR HIGH-VALUE DATASETS</strong></font>
+                </div>
+				<div align = "center" id="circlePacking"> <!--for visualization-->
+					<iframe src="./circlePacking/index.html" width="500" height="470" frameBorder="0"></iframe>
+				</div>
+			</div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#storyboard" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#storyboard" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- User selects a domain from a dropdown menu with options -->
+        <div class="row">
+			<br/>
+            <div class="col-lg-12">
+		        <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="glyphicon glyphicon-exclamation-sign"></i><strong> SELECT A TYPE OF MUNICIPAL DATA</strong></h4>
+                    </div>
+                    <div class="panel-body">
+                        <form id="formWarning" class="form-group has-warning"> <!-- Warning to ensure user selects a domain -->
+							</br>
+							<label id="warning" class="control-label" for="inputWarning"><strong>Dataset: </strong></label>
+							<select id="datasetDomains" class="form-control"> <!-- Add another domain here -->
+								<option disabled selected value></option>
+								<option value="Address Points">Address Points</option>
+								<option value="Annual Budget">Annual Budget</option>
+								<option value="Building Permits">Building Permits</option>
+								<option value="Crime Statistics">Crime Statistics</option>
+								<option value="Election Results">Election Results</option>
+								<option value="Expenditure">Expenditure</option>
+								<option value="Food Safety">Food Safety</option>
+								<option value="Procurement Contracts">Procurement Contracts</option>
+								<option value="Public Facilities">Public Facilities</option>  
+								<option value="Real-Time Transit">Real-Time Transit</option>
+								<option value="Road Construction">Road Construction</option>
+								<option value="Service Requests">Service Requests</option>
+								<option value="Zoning">Zoning</option>
+							</select>
+						</form>
+                    </div>
+				</div>
+			</div>
+        </div>
+        <!-- End of the domain dropdown menu -->
+		
+        <!-- Dynamic table with standards based off what domain the user selected -->
+        <div class="row" id="outputStandards">
+			<div class="col-lg-12">
+                <h2 class="page-header" id="outputStandardsHeader"><!-- Header will be changed with JavaScript event --></h2>
+				<div id="tableLegend" class="well"> <!-- Table legend -->
+					<strong>Legend:   </strong>
+					Yes    <button type="button" class="btn btn-success btn-circle" style="color:#72cf72; background-color: #72cf72"><a data-toggle="tooltip" title="Yes" style="color: #72cf72"><i class="fa fa-link"></i></a></button>
+                    No    <button type="button" class="btn btn-danger btn-circle" style="color:#be4141; background-color: #be4141"><a data-toggle="tooltip" title="No" style="color: #be4141"><i class="fa fa-heart"></i></a></button>
+					No Data   <button type="button" class="btn btn-default btn-circle" style="color:#d9d9d9; background-color: #b3b3b3"><a data-toggle="tooltip" title="No Data" style="color: #b3b3b3"><i class="fa fa-check" ></i></a></button>    
+					<br>
+					<br>
+					<div id="metricsLegend"><!-- Will be filled in with metric icons with JavaScript --></div>
+					<br>
+					<p><strong>Click on <i class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 25px"></i> for more info on the standard. Click on <i class="glyphicon glyphicon-play-circle" aria-hidden="true" style="font-size: 25px; color: #0283b0"></i> for an example</strong></p> 
+					<p><strong>For a metric's rationale, hover over the metric icons in the "Breakdown" column </strong></p>
+				</div>
+				<br/>
+				<div class="table-responsive"> <!-- Dynamic table -->
+					<table class="table table-bordered table-hover table-striped" id="standardsTable">
+                        <thead>
+                            <tr id="tableHeaders"> <!-- Table headers --> 
+								<th>Standard Name</th>
+                                <th>Breakdown</th>
+                                <th>Last Updated By Publisher (m-d-y)</th>
+								<th>Version</th>
+                                <th>Standard Specifications</th>
+								<th>General & Contact Information</th>
+								<th>Information Updated Last By Geothink (m-d-y)</th> 
+                            </tr>
+                        </thead>
+                        <tbody id="rows">
+							<!-- Table information from the OD Standard dashboard will be uploaded into here with JavaScript/jQuery -->
+                        </tbody>
+                    </table>
+				</div>
+			</div>
+        </div>
+        <!-- End of the dynamic table -->
+		
+        <!-- When a user selects the info icons or the download icons in the dynamic table, two different outputs will occur: (1) further information regarding a standard and (2) a user can compare Canadian Municipalities' datasets based on what domain the user selects -->
+		<div class="row">
+			<div id="allOutputs"> <!-- Bin for all outputs after a user selects a domain type -->
+				<div class="row" id="output1"> <!-- First output: all information for an individual standard, will appear when the user selects the info icon -->
+					<div class="col-lg-12">
+						<h2 class="page-header" id="header1"><!-- Header is generated with JavaScript --></h2>
+					</div>
+					<div class="col-lg-12">
+						<ul id="body1"> <!-- This is the div that the example 1 output will be stored --> 
+
+						</ul>
+					</div>
+					<hr>
+				</div>
+				
+				<div id="output2"> <!-- Third output: the city comparison, where all information is pulled from the 10 High-Valued Datasets dashboard -->
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="page-header" id="header3"><strong>Compare Datasets Between Canadian Municipalities</strong></h2>
+						</div>
+					</div>
+					<div class="well" id="wellSizeL"> <!-- This well bins different city dataset information together, where the user can select a certain part of a dataset and compare the info across the different municipalities -->
+						<div class="row" >
+							<div class="col-md-12">
+								<div id="cityComparisonHeader"><strong><!-- Header is generated with JavaScript --></strong></div>
+								<br/>
+								<form>
+									<select id="cityComparison" class="form-control">
+										<option disabled selected value></option>
+										<option value="Dataset Name">Dataset Name</option>
+										<option value="File Format(s) & Structuration">File Format(s) & Structuration</option>
+										<option value="Metadata/Description of Data">Metadata/Description of Data</option>
+										<option value="Open Data Civic Schema">Open Data Civic Schema</option>
+										<option value="Dataset(s) Source">Dataset(s) Source</option>
+									</select>
+								</form>
+								<ul id="cityComparisonInfo" class="col-md-12"> 
+									<!-- (1) This is the div that the example 3 output will be stored --> 
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="well" id="wellSizeR"> <!--this well bins the city dataset information, where the user can select a municipality and see info regarding the domain-specific dataset-->
+						<div class="row">
+							<div class="col-md-12">
+								<div id="cityDatasetsHeader"><strong><!-- Header is generated with JavaScript --></strong></div>
+								<br/>
+								<form>
+									<select id="cityDatasets" class="form-control"> <!-- Add another municipality here -->
+										<option disabled selected value></option>
+										<option value="City of Edmonton">City of Edmonton</option>
+										<option value="City of Ottawa">City of Ottawa</option>
+										<option value="City of Surrey">City of Surrey</option>
+										<option value="City of Toronto">City of Toronto</option>
+										<option value="City of Vancouver">City of Vancouver</option>
+									</select>
+								</form>
+								<ul id="cityDatasetsInfo" class="col-md-12">
+									<!-- (2) This is the div that the example 3 output will be stored --> 	
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of thre three outputs -->
+		
+		<hr>
+
+        <!-- User feedback well -->
+        <div class="well">
+            <div class="row">
+                <div class="col-lg-12">
+						<div id="userFeedbackHeader">
+							<label for="bar"><h4><strong><i class="glyphicon glyphicon-exclamation-sign"></i> CLICK HERE TO GIVE US FEEDBACK</strong></h4></label>
+						</div>
+						<form id="userFeedback">
+							<div class="form-group has-warning">
+								<label class="control-label" for="inputWarning">Comments: </label> <!-- Where user enters any comments --> 
+								<input id="feedback" class="form-control" name="feedback" type="text" value=""/>
+							</div>
+							<label for="bar">Contact Info (optional): </label> <!-- Where user can leave contact info -->
+							<input id="contactInfo" class="form-control" name="contactInfo" type="text" value=""/>
+							<br/>
+							<label for="bar">Name (optional): </label> <!-- Where user can enter their name --> 
+							<input id="userName" class="form-control" name="userName" type="text" value=""/>
+							<br/>
+							<div class="alert alert-success" id="feedbackSuccess"> <!-- Success when the feedback is entered into the Feedback spreadsheet -->
+								<strong>Success!</strong> Your feedback has been received.
+							</div>
+							<div class="alert alert-danger" id="feedbackFailure"> <!-- Failure pop up when there is a technical malfunction --> 
+								<strong>Failure!</strong> Your feedback was not received due to technical difficulties. Please retry at a different time.
+							</div>
+							<div class="alert alert-warning" id="feedbackWarning"> <!-- Warning when user does not write a comment --> 
+								<strong>Warning!</strong> Please provide any comments before you submit.
+							</div>
+							<input class="btn btn-lg btn-default btn-block" type="submit" value="Send"/>
+                    </div>
+				</div>
+            </div>
+        </div>
+		<!-- End of user feedback -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row" align="center">
+                <div class="col-lg-12" style="margin: 20px">
+                    <p>Webpage Design by Bootstrap's Modern Business Template 1.0.5</p>
+					<p><a class="geothinkLogo" href="http://geothink.ca/" target="_blank"><img src="images/Geothink.jpg" height="10%" width="10%"></a></p>
+                </div>
+            </div>
+        </footer>
+		<!-- End of footer -->
+		
+    </div>
+    <!-- End of page content -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+	<!--ajax for posting feedback-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- D3 for Clustering Bubbles Visualization -->
+	<script src="//d3js.org/d3.v3.min.js"></script>
+	
+	<!-- Clustering Bubbles Visualization to pull variables stored in the file -->
+	<script type="html" src="/circlePacking/index.html"></script>	
+	
+    <!-- Script to Activate the Carousel -->
+	
+    <script>
+		$('.carousel').carousel({ // Event for the storyboard
+			interval: false // Changes the speed, set to false to prevent automatic movement of storyboard slides
+		})
+		
+		// The dashboard1Url is the URL with SQL that pulls certain data from the 'OD Standards Inventory' Fusion Table.' It pulls the data by column header, so if you want to add more data, just include the column header of the 'OD Standards Inventory' Fusion Table 
+		var dashboard1Url = "https://www.googleapis.com/fusiontables/v1/query?sql=SELECT Name, Domain, PublisherRep, Open, Tranferability, StakeholderParticipation, ConsensusGov, LvlAdopt, Extensions, MachineReadable, HumanReadable, RealTimeData, Metadata, Updated, Version, URL, License, Description, Publisher, TransRationale, StakeholderParticipationRationale, ConsensusGovRationale, ExtensionsIndicators, MachineRationale, HumanRationale, RealTimeRationale, MetadataRationale, Example, ExampleInfo, References, ContactInfo, UpdatedLastInDashboard, StageInDevelopment FROM 1_Fnd3bJtsMkhK8BjeVoWRRMq15N74P0GiU78SF8G&key=AIzaSyDQ1oxpPOUkswaXP2yauME8JDOf52xlXAQ"; //1Zk-E0gTPEz1lyCMk5kfwTDSkONobtt9LnICj9wGi
+			
+		var jqueryStandards = $.get(dashboard1Url, function(data){ // Using jQuery to access the data from dashboard1Url 
+			
+			$(document).ready(function(){document.getElementById("datasetDomains").onchange = function () { outputData()}}); // When user selects a domain from the "datasetDomains" drop-down menu, the outputData function will run
+		
+			// Need to figure out how to account for the div changing in the circle packing visualization
+			
+			//document.getElementById("circlePacking").onclick = function () {
+			$('.carousel-inner').on("change", function() { 
+				jQuery.ajax({
+					url: "../circlePacking/index.html",
+					success: function (result){
+						var html = jQuery('<div>').html(result);
+						var selectedDomain = html.find("div#domainStorage").html();
+						console.log("this worked");
+						console.log(selectedDomain); // This outputs the inner HTML of the #storeDomain div in the circle packing visualization's index.html
+					},
+				});
+			});
+			
+			function outputData() {
+				
+				$('html,body').animate({ // This allows the webpage to automatically scroll to the dynamic table
+					scrollTop: $(".table-responsive").offset().top},'slow'
+				);
+				
+				document.getElementById("outputStandards").style.display = "block"; // This makes the dynamic table with all the domain-specific standard to appear
+				document.getElementById("output2").style.display = "block"; // This makes the last output (the cross-municipality dataset comparison) to appear
+				
+				var domain = document.getElementById('datasetDomains').value; // This stores the domain that the user selects from the "datasetDomains" drop-down menu
+				
+				var standardsTableHeader = document.getElementById("outputStandardsHeader");
+				standardsTableHeader.innerHTML = "<strong>Standards for " + domain + " Datasets</strong>"; // This changes the header for the table
+				
+				// The standard object stores different properties of each standard. You can add another property at the end of the list 
+				function standard(name, domain, rep, open, trans, stakePart, conGov, adopt, ext, machine, human, time, meta, update, version, url, license, description, publisher, transRat, stakePartRat, conGovRat, extInd, machineRat, humanRat, timeRat, metaRat, example, exampleInfo, references, contactInfo, dashboardUpdate, development){
+					this.name = name; // Name of the standard
+					this.domain = domain; // Domain type the standard is for
+					this.rep = rep; // Public reputation of the standard
+					this.open = open; // Open license METRIC 
+					this.trans = trans; // Transferable to other stakeholders METRIC
+					this.stakePart = stakePart; //Stakeholder participation METRIC
+					this.conGov = conGov; // Consensus-Based governance METRIC
+					this.adopt = adopt; // Level of adoption
+					this.ext = ext; // Extensions
+					this.machine = machine; // Machine readable METRIC
+					this.human = human; // Human readable METRIC
+					this.time = time; // Requires real-time data METRIC
+					this.meta = meta; // Associated metadata from dataset is included METRIC
+					this.update = update; // When the standards was last updated
+					this.version = version; // Version of the standard
+					this.url = url; // URL to the standard 
+					this.license = license; // Standard's license
+					this.description = description; // Description of the standard
+					this.publisher = publisher; // Who the standard's publisher is
+					this.transRat = transRat; // Trans METRIC's rationale
+					this.stakePartRat = stakePartRat; // stakePart METRIC's rationale
+					this.conGovRat = conGovRat; // conGov METRIC's rationale
+					this.extInd = extInd; // Extensions indicator 
+					this.machineRat = machineRat; // machine METRIC's rationale
+					this.humanRat = humanRat; // human METRIC's rationale
+					this.timeRat = timeRat; // time METRIC's rationale
+					this.metaRat = metaRat; // meta METRIC's rationale
+					this.example = example; // Provides an example of the standard
+					this.exampleInfo = exampleInfo; // Further information regarding what the example of the standard is
+					this.references = references; // Where the information for each standard was gathered from (is a URL)
+					this.contactInfo = contactInfo; // Contact information and general overview of the standard (is a URL)
+					this.dashboardUpdate = dashboardUpdate; // When the information was last updated by Geothink
+					this.development = development; // The standard's stage in development 
+				};
+				
+				var standardInfo = []; // An empty array that each standard will be stored in
+				
+				for (var i = 0; i < data.rows.length; i++){ // For loop that fills the standardInfo array
+					var newStandard = new standard(data.rows[i][0], data.rows[i][1], data.rows[i][2], data.rows[i][3], data.rows[i][4], data.rows[i][5], data.rows[i][6], data.rows[i][7], data.rows[i][8], data.rows[i][9], data.rows[i][10], data.rows[i][11], data.rows[i][12], data.rows[i][13], data.rows[i][14], data.rows[i][15], data.rows[i][16], data.rows[i][17], data.rows[i][18], data.rows[i][19], data.rows[i][20], data.rows[i][21], data.rows[i][22], data.rows[i][23], data.rows[i][24], data.rows[i][25], data.rows[i][26], data.rows[i][27], data.rows[i][28], data.rows[i][29], data.rows[i][30], data.rows[i][31], data.rows[i][32], data.rows[i][33]); // Creates a new standard. All data is from the 'OD Standards Inventory' dashboard
+					standardInfo.push(newStandard); // Adds the new standard into the standardInfo array. Essentially, standardInfo holds all standards that exist in the 'OD Standards Inventory' dashboard (each row - the column headers)
+				}
+
+				var number = 0; // Create variable to identify how many standards exist given the domain
+				var temp = []; // Create temporary array to store the standards that exist given the domain 
+				
+				for (var i = 0; i < data.rows.length; i++){ 
+					if (domain == standardInfo[i].domain){ // If the user's selected domain equals the standard's domain 
+						number += 1; // Then account for that 
+						temp.push(standardInfo[i]) // Also push all of the standard's info into the temporary array. This info will be used to fill out the dynamic table and #output1 
+					}
+				}
+				
+				var numRows = number; // The number of standards for the selected domain becomes the number of rows for the dynamic table
+				var numCols = 6; // The number of columns for the dynamic table (given by the "tableHeaders" div)
+				var tbody = ''; // Creating variable for the table body
+				
+				// The findMetrics function will output the metric values (yes/no/unsure/no data) for the standards in the dynamic table 
+				function findMetrics (metric) { 
+					var metrics = []; // This empty array will store all the metric icons
+					if (metric.open == "Yes") { // Generally-speaking: if metric === Yes, then output this icon, else if metric === No, then output this other icon, etc... 
+						var open = '<a data-toggle="tooltip" title="Open License" style="color: white"><button type="button" class="btn btn-circle open" style="color:white; background-color: #72cf72"><i class="fa fa-unlock" aria-hidden="true"></i></button></a>';
+						metrics.push(open); // This pushes/stores this metric icon into the metrics array
+					} else if (metric.open == "No"){
+						var open = '<a data-toggle="tooltip" title="Open License" style="color: white"><button type="button" class="btn btn-circle open" style="color:white; background-color: #be4141"><i class="fa fa-unlock" aria-hidden="true"></i></button></a>';
+						metrics.push(open); 
+					} else {
+						var open = '<a data-toggle="tooltip" title="Open License" style="color: white"><button type="button" class="btn btn-circle open" style="color:white; background-color: #b3b3b3"><i class="fa fa-unlock" aria-hidden="true"></i></button></a>';
+						metrics.push(open)
+					}
+					if (metric.trans == "Yes"){
+						var trans = '<a data-toggle="tooltip" title="Transferable to Other Jurisdictions: ' + metric.transRat + '" style="color: white"><button type="button" class="btn btn-circle trans" style="color:white; background-color: #72cf72"><i class="glyphicon glyphicon-transfer" aria-hidden="true"></i></button></a>';
+						metrics.push(trans);
+					} else if (metric.trans == "No"){
+						var trans = '<a data-toggle="tooltip" title="Transferable to Other Jurisdictions: ' + metric.transRat + '" style="color: white"><button type="button" class="btn btn-circle trans" style="color:white; background-color: #be4141"><i class="glyphicon glyphicon-transfer" aria-hidden="true"></i></button></a>';
+						metrics.push(trans);
+					} else {
+						var trans = '<a data-toggle="tooltip" title="Transferable to Other Jurisdictions: ' + metric.transRat + '" style="color: white"><button type="button" class="btn btn-circle trans" style="color:white; background-color: #b3b3b3"><i class="glyphicon glyphicon-transfer" aria-hidden="true"></i></button></a>';
+						metrics.push(trans);
+					}
+					if (metric.human == "Yes"){
+						var human = '<a data-toggle="tooltip" title="Human Readable: ' + metric.humanRat + '" style="color: white"><button type="button" class="btn btn-circle human" style="color:white; background-color: #72cf72"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></button></a>';
+						metrics.push(human);
+					} else if (metric.human == "No"){
+						var human = '<a data-toggle="tooltip" title="Human Readable: ' + metric.humanRat + '" style="color: white"><button type="button" class="btn btn-circle human" style="color:white; background-color: #be4141"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></button></a>';
+						metrics.push(human);
+					} else {
+						var human = '<a data-toggle="tooltip" title="Human Readable: ' + metric.humanRat + '" style="color: white"><button type="button" class="btn btn-circle human" style="color:white; background-color: #b3b3b3"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></button></a>';
+						metrics.push(human);
+					}
+					if (metric.machine == "Yes"){
+						var machine = '<a data-toggle="tooltip" title="Machine Readable: ' + metric.machineRat + '" style="color: white"><button type="button" class="btn btn-circle machine" style="color:white; background-color: #72cf72"><i class="glyphicon glyphicon-hdd" aria-hidden="true"></i></button></a>';
+						metrics.push(machine);
+					} else if (metric.machine == "No"){
+						var machine = '<a data-toggle="tooltip" title="Machine Readable: ' + metric.machineRat + '" style="color: white"><button type="button" class="btn btn-circle machine" style="color:white; background-color: #be4141"><i class="glyphicon glyphicon-hdd" aria-hidden="true"></i></button></a>';
+						metrics.push(machine);
+					} else {
+						var machine = '<a data-toggle="tooltip" title="Machine Readable: ' + metric.machineRat + '" style="color: white"><button type="button" class="btn btn-circle machine" style="color:white; background-color: #b3b3b3"><i class="glyphicon glyphicon-hdd" aria-hidden="true"></i></button></a>';
+						metrics.push(machine);
+					}
+					if (metric.time == "Yes"){
+						var time = '<a data-toggle="tooltip" title="Requires Real-Time Data: ' + metric.timeRat + '" style="color: white"><button type="button" class="btn btn-circle time" style="color:white; background-color: #72cf72"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></button></a>';
+						metrics.push(time);
+					} else if (metric.time == "No"){
+						var time = '<a data-toggle="tooltip" title="Requires Real-Time Data: ' + metric.timeRat + '" style="color: white"><button type="button" class="btn btn-circle time" style="color:white; background-color: #be4141"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></button></a>';
+						metrics.push(time);
+					} else {
+						var time = '<a data-toggle="tooltip" title="Requires Real-Time Data: ' + metric.timeRat + '" style="color: white"><button type="button" class="btn btn-circle time" style="color:white; background-color: #b3b3b3"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></button></a>';
+						metrics.push(time);
+					}
+					if (metric.stakePart == "Yes"){
+						var stakePart = '<a data-toggle="tooltip" title="Stakeholder Participation: ' + metric.stakePartRat + '" style="color: white"><button type="button" class="btn btn-circle stakePart" style="color:white; background-color: #72cf72"><i class="fa fa-group" aria-hidden="true"></i></button></a>';
+						metrics.push(stakePart);
+					} else if (metric.stakePart == "No"){
+						var stakePart = '<a data-toggle="tooltip" title="Stakeholder Participation: ' + metric.stakePartRat + '" style="color: white"><button type="button" class="btn btn-circle stakePart" style="color:white; background-color: #be4141"><i class="fa fa-group" aria-hidden="true"></i></button></a>';
+						metrics.push(stakePart);
+					} else {
+						var stakePart = '<a data-toggle="tooltip" title="Stakeholder Participation: ' + metric.stakePartRat + '" style="color: white"><button type="button" class="btn btn-circle time" style="color:white; background-color: #b3b3b3"><i class="fa fa-group" aria-hidden="true"></i></button></a>';
+						metrics.push(stakePart);
+					}
+					if (metric.conGov == "Yes"){
+						var conGov = '<a data-toggle="tooltip" title="Consensus-Based Governance: ' + metric.conGovRat + '" style="color: white"><button type="button" class="btn btn-circle conGov" style="color:white; background-color: #72cf72"><i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i></button></a>';
+						metrics.push(conGov);
+					} else if (metric.conGov == "No"){
+						var conGov = '<a data-toggle="tooltip" title="Consensus-Based Governance: ' + metric.conGovRat + '" style="color: white"><button type="button" class="btn btn-circle conGov" style="color:white; background-color: #be4141"><i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i></button></a>';
+						metrics.push(conGov);
+					} else {
+						var conGov = '<a data-toggle="tooltip" title="Consensus-Based Governance: ' + metric.conGovRat + '" style="color: white"><button type="button" class="btn btn-circle conGov" style="color:white; background-color: #b3b3b3"><i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i></button></a>';
+						metrics.push(conGov);
+					}
+					if (metric.ext == "Yes"){
+						var ext = '<a data-toggle="tooltip" title="Extensions: ' + metric.extInd + '" style="color: white"><button type="button" class="btn btn-circle ext" style="color:white; background-color: #72cf72"><i class="fa fa-external-link" aria-hidden="true"></i></button></a>';
+						metrics.push(ext);
+					} else if (metric.ext == "No"){
+						var ext = '<a data-toggle="tooltip" title="Extensions: ' + metric.extInd + '" style="color: white"><button type="button" class="btn btn-circle ext" style="color:white; background-color: #be4141"><i class="fa fa-external-link" aria-hidden="true"></i></button></a>';
+						metrics.push(ext);
+					} else {
+						var ext = '<a data-toggle="tooltip" title="Extensions: ' + metric.extInd + '" style="color: white"><button type="button" class="btn btn-circle ext" style="color:white; background-color: #b3b3b3"><i class="fa fa-external-link" aria-hidden="true"></i></button></a>';
+						metrics.push(ext);
+					}
+					if (metric.meta == "Yes"){
+						var meta = '<a data-toggle="tooltip" title="Takes into Account Associated Metadata for the Dataset: ' + metric.metaRat + '" style="color: white"><button type="button" class="btn btn-circle meta" style="color:white; background-color: #72cf72"><i class="fa fa-file" aria-hidden="true"></i></button></a>';
+						metrics.push(meta);
+					} else if (metric.meta == "No"){
+						var meta = '<a data-toggle="tooltip" title="Takes into Account Associated Metadata for the Dataset: ' + metric.metaRat + '" style="color: white"><button type="button" class="btn btn-circle meta" style="color:white; background-color: #be4141"><i class="fa fa-file" aria-hidden="true"></i></button></a>';
+						metrics.push(meta);
+					} else {
+						var meta = '<a data-toggle="tooltip" title="Takes into Account Associated Metadata for the Dataset: ' + metric.metaRat + '" style="color: white"><button type="button" class="btn btn-circle meta" style="color:white; background-color: #b3b3b3"><i class="fa fa-file" aria-hidden="true"></i></button></a>';
+						metrics.push(meta);
+					}
+					var metricsJoined = metrics.join("  "); // Combines the metrics together by removing the commas from the array the icons are stored in
+					return metricsJoined; // What will be returned when the function is called
+				}
+				
+				// The following three lines of code create an array of metrics that will appear in the dynamic table's legend
+				var metricLegend = ['<a class="tooltipStyle" data-toggle="tooltip" title="Open License: What qualifies a standard as being “open” is debated. However, openness may be inferred when the standard is published under an open license. Open licenses iterate that anyone has the right to repurpose and share the material without restriction. Examples of open licenses include public domain licenses, the UK Open Government License v3, creative commons licenses, and open data common licenses (World Bank, Open Data Essentials)." style="color: white"><button type="button" class="btn btn-circle open" style="color:white; background-color: #000000"><i class="fa fa-unlock" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Transferable to Other Jurisdictions: There is a hierarchy regarding the ease of implementation for a standard. For example, CSV format of a standard requires a minimal degree of resources and technical knowledge. On the other hand, more complex and sophisticated ways of formatting standards, such as RDF and SOAP, are not as easy for municipal bodies to implement. More often than not, sophisticated formats tend not to be manageable for municipal actors that lack resources and technical background. Standards that handle dynamic data and cURL APIs exemplify more complex ways of publishing city datasets." style="color: white"><button type="button" class="btn btn-circle trans" style="color:white; background-color: #000000"><i class="glyphicon glyphicon-transfer" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Human Readable: Human readable requires a medium of data or information that can easily be understood by people. Therefore, the standard should encode the data by using easily identifiable text. Of course, there are semantic consideration for human readable standards. For example, there could be a variety of interpretive meanings associated with encoding the data through text." style="color: white"><button type="button" class="btn btn-circle human" style="color:white; background-color: #000000"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Machine Readable: Acceptable machine readable structures include XML, RSS feed, CSV, RDF, JSON, TXT, XLS(X), and KML formats. Formats that are not machine readable include PDF, HTML, DOC(X), anything scanned, anything faxed, and anything typed in an email (Suszan, 2014). Standard’s ought to compliment techniques to provide human and machine readable structures for the data. Publishing data as machine readable includes (1) established standard vocabularies, (2) enriching the HTML resources with metadata, semantics, and identifiers, (3) and implementing simple, manageable, and stable URIs (Bennett and Harvey, 2009). Data tables, according to the standard’s specification, should be normalized so to be incorporated into a relational database." style="color: white"><button type="button" class="btn btn-circle machine" style="color:white; background-color: #000000"><i class="glyphicon glyphicon-hdd" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Requires Real-Time Data: This metric varies depending on the domain of the data. Some domains require formats that handle data in real time. However, other domains may require that the standard specify that data be updated quarterly or annually. For example, standards that handle transit and road construction data would require a web feed format to deliver updates about developments as they occur. However, budget datasets only requires a quarterly or yearly update. In practice, many municipal publishers still publish data in static files."><button type="button" class="btn btn-circle time" style="color:white; background-color: #000000"><i class="glyphicon glyphicon-time" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Stakeholder Participation: Stakeholders for a standard include civil society, government, and the private sector. An open standard should aim to include all types of stakeholders in its conception and maintenance. Types of stakeholder participation can be inferred based on the types of publisher reputations." style="color: white"><button type="button" class="btn btn-circle stakePart" style="color:white; background-color: #000000"><i class="fa fa-group" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Consensus-Based Governance: Standardization implies an ongoing dialogue between producers and consumers of data. It is important to note that consensus-based governance does not mean that all inputs are accepted if the majority agrees. Instead, consensus-based indicates a process willing to address any request pertaining to the standard’s statement of purpose.  A charter providing transparency of decisions about the standard’s evolution support a consensus-based approach. Consensus-based governance can be inferred by the presence of a mailing list or active working group for the standard." style="color: white"><button type="button" class="btn btn-circle conGov" style="color:white; background-color: #000000"><i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Extensions: This column indicates the flexibility of a standard’s implementation. In addition, extensibility of a standard provides insight into how a standard is being implemented and enhanced for specific purposes." style="color: white"><button type="button" class="btn btn-circle ext" style="color:white; background-color: #000000"><i class="fa fa-external-link" aria-hidden="true"></i></button></a>','<a class="tooltipStyle" data-toggle="tooltip" title="Takes into Account Associated Metadata for the Dataset: This metric checks whether the standard schema requires metadata. A “yes” for this metric indicates a presence of both descriptive and structural metadata for the primary data. Each standard should readily make available the time and date of the data’s creation, the author, location of the data on the computer networks, and information about any standard applied to the raw data. Metadata should have embedded permanent and/or discoverable URIs and should utilize electronic citations of the data in the form of hyperlinks (Bennett and Harvey, 2009)." style="color: white"><button type="button" class="btn btn-circle meta" style="color:white; background-color: #000000"><i class="fa fa-file" aria-hidden="true"></i></button></a>'];
+				var metricLegendJoined = metricLegend.join("  ");
+				document.getElementById("metricsLegend").innerHTML = metricLegendJoined;
+				
+				for (var i = 0; i < numRows; i++){ // This for loops fills in the dynamic table's rows
+					tbody += '<tr id="row' + i + '">'; // Creates the table row's tag with id name "row" + index number... This means each row will have a different id # (e.g. row0, row1 if there are two output standards)
+					tbody += '<td class="col-md-2">'; // First column of the row
+					if (temp[i].development == "Completed"){
+						if (temp[i].example.substring(0,7) == "http://" || temp[i].example.substring(0,7) == "https:/"){ // Accounts for the differences in the "Example" column's cells from the "OD Standards Inventory" dashboard
+							tbody += temp[i].name + '  <p><p><a data-toggle="tooltip" title="Click to Hide/Show Info" style="color: black"><i id="standardName' + i + '" class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 25px"></i></a>     <a href="' + temp[i].example + '" target="_blank" data-toggle="tooltip" title="Example: ' + temp[i].exampleInfo + '"><i id="ex' + i + '" class="glyphicon glyphicon-play-circle" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="Stage In Development: Completed" style="color: #72cf72"><i class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size: 25px"></i></a></p></p>'; // The first column of the row shows the standard's name as well as the info icon and download icon for #output1
+						} else { // Else if the example does not exist
+							tbody += temp[i].name + '  <p><p><a data-toggle="tooltip" title="Click to Hide/Show Info" style="color: black"><i id="standardName' + i + '" class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="No Example" style="color: black"><i id="ex' + i + '" class="glyphicon glyphicon-play-circle" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="Stage In Development: Completed" style="color: #72cf72"><i class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size: 25px"></i></a></p></p>'; // The first column of the row shows the standard's name as well as the info icon and download icon for #output1
+						}
+					} else {
+						if (temp[i].example.substring(0,7) == "http://" || temp[i].example.substring(0,7) == "https:/"){
+							tbody += temp[i].name + '  <p><p><a data-toggle="tooltip" title="Click to Hide/Show Info" style="color: black"><i id="standardName' + i + '" class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 25px"></i></a>     <a href="' + temp[i].example + '" target="_blank" data-toggle="tooltip" title="Example: ' + temp[i].exampleInfo + '"><i id="ex' + i + '" class="glyphicon glyphicon-play-circle" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="Stage In Development: Draft" style="color: #be4141"><i class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size: 25px"></i></a></p></p>'; // The first column of the row shows the standard's name as well as the info icon and download icon for #output1
+						} else {
+							tbody += temp[i].name + '  <p><p><a data-toggle="tooltip" title="Click to Hide/Show Info" style="color: black"><i id="standardName' + i + '" class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="No Example" style="color: black"><i id="ex' + i + '" class="glyphicon glyphicon-play-circle" aria-hidden="true" style="font-size: 25px"></i></a>     <a data-toggle="tooltip" title="Stage In Development: Draft" style="color: #be4141"><i class="glyphicon glyphicon-ok-circle" aria-hidden="true" style="font-size: 25px"></i></a></p></p>'; // The first column of the row shows the standard's name as well as the info icon and download icon for #output1
+						}
+					}
+					tbody += '</td>'; 
+					tbody += '<td class="col-md-5">'; // Second column of the row. The class is changed so that the column width is fixed at a size that will allow all metric icons to be on the same row
+					tbody += findMetrics(temp[i]); // Calls the findMetrics function to return the metric values for the associated standard
+					tbody += '</td>'; 
+					tbody += '<td>'; // Third column of the row 
+					tbody += temp[i].update; // This shows the standard's updated since
+					tbody += '</td>';
+					tbody += '<td>'; // Fourth column of the row 
+					tbody += temp[i].version; // This shows the standard's version
+					tbody += '</td>';
+					tbody += '<td>'; // Fifth column of the row
+					tbody += '<a href="' + temp[i].url + '" target="_blank">Specifications</a>'; // Creates a clickable link that opens a new tab to show the standard's specifications
+					tbody += '</td>';
+					tbody += '<td>'; // Sixth column of the row 
+					tbody += '<a href="' + temp[i].contactInfo + '" target="_blank">More Info</a>'; // Creates a clickable link that opens a new tab that shows the standard's contact info and general info
+					tbody += '</td>';
+					tbody += '<td>'; // Seventh column of the row 
+					tbody += temp[i].dashboardUpdate; // Indicates when Geothink last updated their information 
+					tbody += '</td>';
+					tbody += '</tr>\n'; // End of the row
+				}
+
+				rows.innerHTML = tbody; // Puts the rows into the div id="rows"
+				
+				$('[data-toggle="tooltip"]').tooltip(); // This creates the pop-up info balloons 
+
+				for (i = 0; i < numRows; i++){
+					$('#standardName' + i).click(function (){
+						$("#output1").toggle('display'); // This toggles show/hide when user selects the info icon
+						$(this).toggleClass("glyphicon glyphicon-plus-sign glyphicon glyphicon-minus-sign"); // When the user selects the download or info icons, the icons should change to emphasize it is collapsable (a toggle)		
+					});
+				}		
+				
+				// The following chunk of code restarts dynamic table and the three outputs when a use re-selects a domain 
+				
+				$("#output1").hide(); 
+				$("#output2").show();
+				var cityDataset = document.getElementById("cityDatasets");
+				var cityComparisons = document.getElementById("cityComparison");
+				var cityDatasetInfo = document.getElementById("cityDatasetsInfo");
+				var cityComparisonsInfo = document.getElementById("cityComparisonInfo");
+				cityDataset.value = "disabled selected value"; // Resets the drop-down menu to the default
+				cityComparisons.value = "disabled selected value"; // Resets the drop-down menu to the default
+				cityDatasetInfo.innerHTML = ''; // Clears the output info regarding the city datasets
+				cityComparisonsInfo.innerHTML = ''; // Same as above
+				var cityComparisonTitle = document.getElementById("cityComparisonHeader");
+				cityComparisonTitle.innerHTML = "<strong>Select a certain property to compare how different Canadian municipalities publish their " + domain + " datasets</strong>"; // Changes the cityComparisonHeader
+				var cityDatasetsTitle = document.getElementById("cityDatasetsHeader");
+				cityDatasetsTitle.innerHTML = "<strong>Select a specific Canadian municipality to review all properties of their " + domain + " dataset</strong>"; // Changes the cityDatasetsHeader
+				document.getElementById("header3").innerHTML = "<strong>Compare " + domain + " Datasets Between Canadian Municipalities</strong>"; // Change the header for output2
+				
+				// End of chunk of code for when a user re-selects a domain 
+				
+				for (i = 0; i < temp.length; i++){ //For loop for closure. temp.length represents the number of domain-specific standards that are shown in the dynamic table after a user selects a domain 
+					moreInfo(i);
+				}
+				
+				// To deal with closure, create a function that takes in i from the above for loop. This function generates the output info for #output1
+				function moreInfo(i){ 
+					var info = temp[i] // The var info is an individual standard from the dynamic table 			
+				
+					var header1 = document.getElementById("header1"); // Header 1 for #output1
+					var body1 = document.getElementById("body1"); // Where the output info for #output1 will be stored
+					
+					$('#standardName' + i).click(function (i) { // Start an event when a user clicks the info icon from a certain standard (a row) from the dynamic table 
+						header1.innerHTML = "<strong>" + info.name + " Details</strong>"; // Changes header 1
+						// The following line of code changes #output1 body 
+						body1.innerHTML = "<li>" + findMetrics(info) + "</li><br/>" + "<li><strong>Description: </strong>" + info.description + "</li><br/>" + "<li><strong>License: </strong>" + info.license + "</li><br/>" + "<li><strong>Publisher: </strong>" + info.publisher + "</li><br/>" + "<li><strong>Publisher Reputation: </strong>" + info.rep + "</li><br/>" + "<li><strong>Transferability to Other Stakeholders Rationale: </strong>" + info.transRat + "</li><br/>" + "<li><strong>Stakeholder Participation Rationale: </strong>" + info.stakePartRat + "</li><br/>" + "<li><strong>Consensus-based Governance Rationale: </strong>" + info.conGovRat + "</li><br/>" + "<li><strong>Level of Adoption: </strong>" + info.adopt + "</li><br/>" + "<li><strong>Extensions Indicator(s): </strong>" + info.extInd + "</li><br/>" + "<li><strong>Machine Readable Rationale: </strong>" + info.machineRat + "</li><br/>" + "<li><strong>Human Readable Rationale: </strong>" + info.humanRat + "</li><br/>" + "<li><strong>Requires Real-Time Data Rationale: </strong>" + info.timeRat + "</li><br/>" + "<li><strong>Metadata Rationale: </strong>" + info.metaRat + "</li><br/>";
+						$('html,body').animate({ // This jQuery automatically scrolls to the standard's #output1 body when the user clicks the info icon
+						scrollTop: $("#output1").offset().top},'slow');
+					});
+				};
+			}; // End of the outputData() function
+			
+			// The dashboard2Url is the URL with SQL that pulls certain data from the 'Adoption of OD Standards by Cities' Fusion Table. It pulls the data by column header, so if you want to add another city, just include the column header of the 'Adoption of OD Standards by Cities' Fusion Table 
+			var dashboard2Url = "https://www.googleapis.com/fusiontables/v1/query?sql=SELECT Domain, Info, Vancouver, Toronto, Surrey, Edmonton, Ottawa FROM 1YIPP6YulaL-VcYsCpgGkjRl1SOSUat7K7L6Z1U8O&key=AIzaSyDQ1oxpPOUkswaXP2yauME8JDOf52xlXAQ"; //old fusion table id: 1AQk8fDDms4Mi4bK9ILsPNeJ7SM95lycOwe7HIkYY
+			
+			var jqueryCities = $.get(dashboard2Url, function(data){ // Using jQuery to access the data from dashboard2Url
+				
+				var userDomain = document.getElementById("datasetDomains").value; // Storing the value of the domain the user selected (e.g. "Crime Statistics")
+				var userCity = document.getElementById("cityDatasets").value; // Storing the value of the city the user selected (e.g. "City of Toronto")
+				var userDatasetProperty = document.getElementById("cityComparison").value; // Storing the value of the dataset property the user selected (e.g. "File format and structuration")
+				
+				//The following fielFormats function is extremely long/messy because it breaks up portions of a long string from the "Structuration" row in the 'Adoption of OD Standards by Cities' Fusion Table into separate variables
+				function fileFormats (userCity, userDomain, file, structure) { // This function creates an array of .svg images that show different file formats for each dataset (from the "Fil Format(s)" rows). Also included are description bubbles for each image that explains the structuration of the file type (under the "Structuration" rows)
+					
+					var store = []; // An empty array where the individual images will be stored for each dataset
+					var json; 
+					var xml;
+					var pdf;
+					var rss;
+					var csv;
+					var rdf;
+					var soda;
+					var xls;
+					var xlsx;
+					var kml;
+					var arcgis;
+					var dwg;
+					var geojson;
+					var atom;
+					var txt;
+					var georss;
+					var na;
+					var odata;
+					var shp;
+					var gdb;
+					var kmz;
+					var structureSplit;
+					
+					// This creates images for each file type and provides a popup that shows what is inside the "Structuration" row 
+
+					var fileArray = file.split(',') // This creates the structure string into an array 				
+
+					if (fileArray.length > 1) { // If there is more than one file format for the dataset in the "File Format(s)" row of the ""Adoption of OD Standards by Cities" spreadsheet
+						structureSplit = structure.split('. '); // Separate the structuration cells by each sentence (each file description)
+						for (var i = 0; i < structureSplit.length; i++)	{ // For each file description (structuration)
+							createFiles(i) // Create a new file icon 
+						}
+					}
+					
+					if (fileArray.length == 1) { // If there is just a single file for a dataset (seen in the "File Format(s)" row of the ""Adoption of OD Standards by Cities" spreadsheet), then just output the text within the "Structuration" row
+						if (fileArray.indexOf("CSV") >= 0) {
+							csv = "<a class ='fileStructuration' data-toggle='tooltip' title='CSV: " + structure + "' style='color: black'><img src='images/CSV.svg' width='60' height='70'></a>";
+							store.push(csv);
+						}
+						if (fileArray.indexOf("PDF") >= 0) {
+							pdf = "<a class ='fileStructuration' data-toggle='tooltip' title='PDF: " + structure + "' style='color: black'><img src='images/PDF.svg' width='60' height='70'></a>";
+							store.push(pdf);
+						}
+						if (fileArray.indexOf("RSS") >= 0) {
+							rss = "<a class ='fileStructuration' data-toggle='tooltip' title='RSS: " + structure + "' style='color: black'><img src='images/RSS.svg' width='60' height='70'></a>";
+							store.push(rss);
+						}
+						if (fileArray.indexOf("RDF") >= 0) {
+							rdf = "<a class ='fileStructuration' data-toggle='tooltip' title='RDF: " + structure + "' style='color: black'><img src='images/RDF.svg' width='60' height='70'></a>";
+							store.push(rdf);
+						}
+						if (fileArray.indexOf("SODA API") >= 0) {
+							soda = "<a class ='fileStructuration' data-toggle='tooltip' title='SODA API: " + structure + "' style='color: black'><img src='images/SODA_API.svg' width='60' height='70'></a>";
+							store.push(soda);
+						}
+						if (fileArray.indexOf("XLS") >= 0) {
+							xls = "<a class ='fileStructuration' data-toggle='tooltip' title='XLS: " + structure + "' style='color: black'><img src='images/XLS.svg' width='60' height='70'></a>";
+							store.push(xls);
+						}
+						if ((fileArray.indexOf("XLSX") >= 0) || (fileArray.indexOf("Excel Microsoft Office Open Extensible Markup Language Format Spreadsheet") >= 0)){
+							xlsx = "<a class ='fileStructuration' data-toggle='tooltip' title='XLSX: " + structure + "' style='color: black'><img src='images/XLSX.svg' width='60' height='70'></a>";
+							store.push(xlsx);
+						}
+						if (fileArray.indexOf("KML") >= 0) {
+							kml = "<a class ='fileStructuration' data-toggle='tooltip' title='KML: " + structure + "' style='color: black'><img src='images/KML.svg' width='60' height='70'></a>";
+							store.push(kml);
+						}
+						if (fileArray.indexOf("ArcGIS Rest API") >= 0){
+							arcgis = "<a class ='fileStructuration' data-toggle='tooltip' title='ArcGIS Rest API: " + structure + "' style='color: black'><img src='images/ArcGIS.svg' width='60' height='70'></a>";
+							store.push(arcgis);
+						}
+						if (fileArray.indexOf("DWG") >= 0) {
+							dwg = "<a class ='fileStructuration' data-toggle='tooltip' title='DWG: " + structure + "' style='color: black'><img src='images/DWG.svg' width='60' height='70'></a>";
+							store.push(dwg);
+						}
+						if (fileArray.indexOf("Geo JavaScript Object Notation") >= 0) {
+							geojson = "<a class ='fileStructuration' data-toggle='tooltip' title='GeoJSON: " + structure + "' style='color: black'><img src='images/GeoJSON.svg' width='60' height='70'></a>";
+							store.push(geojson);
+						}
+						if (fileArray.indexOf("ATOM") >= 0) {
+							atom = "<a class ='fileStructuration' data-toggle='tooltip' title='ATOM: " + structure + "' style='color: black'><img src='images/ATOM.svg' width='60' height='70'></a>";
+							store.push(atom);
+						}
+						if (fileArray.indexOf("TXT") >= 0) {
+							txt = "<a class ='fileStructuration' data-toggle='tooltip' title='TXT: " + structure + "' style='color: black'><img src='images/TXT.svg' width='60' height='70'></a>";
+							store.push(txt);
+						}
+						if (fileArray.indexOf("Geo Rich Site Summary") >= 0){
+							georss = "<a class ='fileStructuration' data-toggle='tooltip' title='GeoRSS: " + structure + "' style='color: black'><img src='images/GeoRSS.svg' width='60' height='70'></a>";
+							store.push(georss);
+						}
+						if (fileArray.indexOf("OData") >= 0){
+							odata = "<a class ='fileStructuration' data-toggle='tooltip' title='OData: " + structure + "' style='color: black'><img src='images/OData.svg' width='60' height='70'></a>";
+							store.push(odata);
+						}
+						if (fileArray.indexOf("SHP") >= 0) {
+							shp = "<a class ='fileStructuration' data-toggle='tooltip' title='SHP: " + structure + "' style='color: black'><img src='images/SHP.svg' width='60' height='70'></a>";
+							store.push(shp);
+						}
+						if (fileArray.indexOf("GDB") >= 0){
+							gdb = "<a class ='fileStructuration' data-toggle='tooltip' title='GDB: " + structure + "' style='color: black'><img src='images/GDB.svg' width='60' height='70'></a>";
+							store.push(gdb);
+						}
+						if (fileArray.indexOf("KMZ") >= 0){
+							kmz = "<a class ='fileStructuration' data-toggle='tooltip' title='KMZ: " + structure + "' style='color: black'><img src='images/KMZ.svg' width='60' height='70'></a>";
+							store.push(kmz);
+						}
+						if (fileArray.indexOf("JSON") >= 0) {
+							json = "<a class ='fileStructuration' data-toggle='tooltip' title='JSON: " + structure + "' style='color: black'><img src='images/JSON.svg' width='60' height='70'></a>";
+							store.push(json);
+						}
+						if (fileArray.indexOf("XML") >= 0) {
+							xml = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structure + "' style='color: black'><img src='images/XML.svg' width='60' height='70'></a>";
+							store.push(xml);
+						}
+						if (fileArray.indexOf("N/A") >= 0){
+							na = "N/A";
+							store.push(na);
+						}
+					}
+					
+					function createFiles(i) { // This function runs if there is more than one file type provided for a dataset. It creates the file icon if the file type is mentioned in the "Structuration" row of the "Adoption of OD Standards by Cities" spreadsheet
+					
+						console.log(structureSplit[i])
+					
+						if (structureSplit[i].indexOf("CSV") >= 0){ // If there is a CSV file format
+							csv = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/CSV.svg' width='60' height='70'></a>";
+							store.push(csv); // Store the CSV icon into the store array 
+						}
+						if (structureSplit[i].indexOf("PDF") >= 0){
+							pdf = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/PDF.svg' width='60' height='70'></a>";
+							store.push(pdf);
+						}
+						if (structureSplit[i].indexOf("RSS") >= 0){
+							rss = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/RSS.svg' width='60' height='70'></a>";
+							store.push(rss);
+						}
+						if (structureSplit[i].indexOf("RDF") >= 0){
+							rdf = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/RDF.svg' width='60' height='70'></a>";
+							store.push(rdf);
+						}
+						if (structureSplit[i].indexOf("SODA API") >= 0){
+							soda = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/SODA_API.svg' width='60' height='70'></a>";
+							store.push(soda);
+						}
+						if (structureSplit[i].indexOf("XLS") >= 0){
+							xls = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/XLS.svg' width='60' height='70'></a>";
+							store.push(xls);
+						}
+						if (structureSplit[i].indexOf("Excel Microsoft Office Open Extensible Markup Language Format Spreadsheet") >= 0){
+							xlsx = "<a class ='fileStructuration' data-toggle='tooltip' title='XLSX: " + structureSplit[i] + "' style='color: black'><img src='images/XLSX.svg' width='60' height='70'></a>";
+							store.push(xlsx);
+						}
+						if (structureSplit[i].indexOf("KML") >= 0){
+							kml = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/KML.svg' width='60' height='70'></a>";
+							store.push(kml);
+						}
+						if (structureSplit[i].indexOf("ArcGIS Rest API") >= 0){
+							arcgis = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/ArcGIS.svg' width='60' height='70'></a>";
+							store.push(arcgis);
+						}
+						if (structureSplit[i].indexOf("DWG") >= 0){
+							dwg = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/DWG.svg' width='60' height='70'></a>";
+							store.push(dwg);
+						}
+						if (structureSplit[i].indexOf("Geo JavaScript Object Notation") >= 0){
+							geojson = "<a class ='fileStructuration' data-toggle='tooltip' title='GeoJSON: " + structureSplit[i] + "' style='color: black'><img src='images/GeoJSON.svg' width='60' height='70'></a>";
+							geojson = "<a class ='fileStructuration' data-toggle='tooltip' title='GeoJSON: " + structureSplit[i] + "' style='color: black'><img src='images/GeoJSON.svg' width='60' height='70'></a>";
+							store.push(geojson);
+						}
+						if (structureSplit[i].indexOf("ATOM") >= 0){
+							atom = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/ATOM.svg' width='60' height='70'></a>";
+							store.push(atom);
+						}
+						if (structureSplit[i].indexOf("TXT") >= 0){
+							txt = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/TXT.svg' width='60' height='70'></a>";
+							store.push(txt);
+						}
+						if (structureSplit[i].indexOf("Geo Rich Site Summary") >= 0){
+							georss = "<a class ='fileStructuration' data-toggle='tooltip' title='GeoRSS: " + structureSplit[i] + "' style='color: black'><img src='images/GeoRSS.svg' width='60' height='70'></a>";
+							store.push(georss);
+						}
+						if (structureSplit[i].indexOf("OData") >= 0){
+							odata = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/OData.svg' width='60' height='70'></a>";
+							store.push(odata);
+						}
+						if (structureSplit[i].indexOf("SHP") >= 0){
+							shp = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/SHP.svg' width='60' height='70'></a>";
+							store.push(shp);
+						}
+						if (structureSplit[i].indexOf("GDB") >= 0){
+							gdb = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/GDB.svg' width='60' height='70'></a>";
+							store.push(gdb);
+						}
+						if (structureSplit[i].indexOf("KMZ") >= 0){
+							kmz = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/KMZ.svg' width='60' height='70'></a>";
+							store.push(kmz);
+						}
+						if (structureSplit[i].indexOf("JSON") >= 0){
+							json = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/JSON.svg' width='60' height='70'></a>";
+							store.push(json);
+						}
+						if (structureSplit[i].indexOf("XML") >= 0){
+							xml = "<a class ='fileStructuration' data-toggle='tooltip' title='" + structureSplit[i] + "' style='color: black'><img src='images/XML.svg' width='60' height='70'></a>";
+							store.push(xml);
+						}
+						if (structureSplit[i].indexOf("N/A") >= 0){
+							na = "N/A";
+							store.push(na);
+						}
+						return store;
+					}
+					
+					var filter = store.filter(function(elem, index, self){ // This function removes any duplicates that could appear in the store array 
+						return index == self.indexOf(elem);
+					});
+					var filesJoined = filter.join("  "); // This removes the commas between each file icon (for presentation)
+					return filesJoined; // Return the file type images with their associated bubbles for an individual dataset 
+				};
+					
+				function getCityInfo (data, userDomain, userCity){ // This function stores all the dashboard's city data into each city object
+					// IF ADDED NEW ROW then you must add a new property to the city object 
+					// Create an object for the municipalities that are present in the Fusion Table 
+					function city (number, cityName, setName, fileStructure, dataDescription, schema, link){
+						this.number = number; // The number it represents in the data (e.g. Vancouver is 2 because it is the 3rd column of the Fusion Table, Toronto is 3 because it is the 4th column, etc...)
+						this.cityName = cityName; // The name of the city
+						this.setName = setName; // The dataset name 
+						this.fileStructure = fileStructure; // The file structuration 
+						this.dataDescription = dataDescription; // The data description/metadata
+						this.schema = schema; // Whether or not the dataset has a standard
+						this.link = link;
+					}
+					
+					// IF ADDED NEW ROW then you must add +1 to iteration because that means there are i +1 rows before a new domain in the Fusion Table
+					for (var i = 0; i < data.rows.length; i += 6){ // This for loops run through the Fusion Table 
+						// Create variables for each municipality that is in the Fusion Table 
+						var Surrey; 
+						var Ottawa;
+						var Vancouver;
+						var Edmonton; 
+						var Toronto; 
+						// ADD CITY add a new var of the city name
+						
+						if (data.rows[i][0] == userDomain){ // If the domain in the Fusion Table is equal to the domain that the user selected on the web page 
+							// Create new objects for each city that store the domain-specific dataset (e.g. if a user selects the Annual Budget domain, then each object will have the Annual Budget dataset stored)
+							Surrey = new city (4, "City of Surrey", data.rows[i][4], fileFormats("City of Surrey", userDomain, data.rows[i+1][4], data.rows[i+2][4]), data.rows[i+3][4], data.rows[i+4][4], data.rows[i+5][4])
+							Ottawa = new city (6, "City of Ottawa", data.rows[i][6], fileFormats("City of Ottawa", userDomain, data.rows[i+1][6], data.rows[i+2][6]), data.rows[i+3][6], data.rows[i+4][6], data.rows[i+5][6])
+							Toronto = new city (3, "City of Toronto", data.rows[i][3], fileFormats("City of Toronto", userDomain, data.rows[i+1][3], data.rows[i+2][3]), data.rows[i+3][3], data.rows[i+4][3], data.rows[i+5][3])
+							Vancouver = new city (2, "City of Vancouver", data.rows[i][2], fileFormats("City of Vancouver", userDomain, data.rows[i+1][2], data.rows[i+2][2]), data.rows[i+3][2], data.rows[i+4][2], data.rows[i+5][2])
+							Edmonton = new city (5, "City of Edmonton", data.rows[i][5], fileFormats("City of Edmonton", userDomain, data.rows[i+1][5], data.rows[i+2][5]), data.rows[i+3][5], data.rows[i+4][5], data.rows[i+5][5])
+							// ADD CITY add a new object. The city number would depend on the column (firt column in spreadsheet is 0)
+							// IF ADDED NEW ROW then you must add a new property to each city  
+						}
+					}
+					
+					return [Surrey, Ottawa, Toronto, Vancouver, Edmonton]; // ADD CITY must include the city name here
+				};
+				
+				document.getElementById("cityDatasets").onchange = function (e){ // When a user selects a single municipality to see their domain-specific dataset, the following function will run
+					
+					var userDomain = document.getElementById("datasetDomains").value; // Storing the value of the domain the user selected (e.g. "Crime Statistics")
+					var userCity = document.getElementById("cityDatasets").value; // Storing the value of the city the user selected (e.g. "City of Toronto")
+					var cityDatasetInfo = document.getElementById("cityDatasetsInfo"); // Storing where the output will be located 
+					var domainInfo = ""; // Creates an undefined variable for closure 
+					
+					var cityInfo = getCityInfo(data, userDomain, userCity); 
+					var Surrey = cityInfo[0];
+					var Ottawa = cityInfo[1];
+					var Vancouver = cityInfo[3];
+					var Edmonton= cityInfo[4]; 
+					var Toronto = cityInfo[2]; 
+					// ADD CITY must include the city here
+					
+					// IF ADDED NEW ROW then you must add +1 to iteration because that means there are i +1 rows before a new domain in the Fusion Table
+					for (var i = 0; i < data.rows.length; i += 6){ // For loop that runs through the entire 'Adoption of OD Standards by Cities' Fusion table's domains. The loop needs to increment by 6 b/c every 6 rows in the Fusion Table indicates a different domain
+						if (data.rows[i][0] == userDomain){
+							domainInfo = userDomain; // If the data equals the user's input domain
+						}
+					}
+					
+					if (domainInfo == userDomain) { // Accounts for closure, if the domain the user selected is equal to a domain that is shown in the Fusion Table 
+						for (var i = 0; i < data.rows.length; i += 6){ // IF ADDED NEW ROW then you must add +1 to iteration because that means there are i +1 rows before a new domain in the Fusion Table
+							if (data.rows[i][0] == userDomain){
+								if (userCity == "City of Surrey"){ // If the user selects the City of Surrey, output the following into the #cityDatasetInfo div
+									cityDatasetInfo.innerHTML = "<br/><li><strong>Dataset Name: </strong>" + Surrey.setName + "</li><br/>" + "<li><strong>Powered By: </strong>CKAN</strong></li><br/>" + "<li><strong>File Format(s) & Structuration: </strong>" + Surrey.fileStructure + "</li><br/>" + "<li><strong>Metadata/Description of Data: </strong>" + Surrey.dataDescription + "</li><br/>" + "<li><strong>Open Data Civic Schema: </strong>" + Surrey.schema + "</li><br/>" + "<li><strong>Dataset(s) Source: </strong>" + Surrey.link + "</li>"; 
+								} else if (userCity == "City of Toronto"){
+									cityDatasetInfo.innerHTML = "<br/><li><strong>Dataset Name: </strong>" + Toronto.setName + "</li><br/>" + "<li><strong>File Format(s) & Structuration: </strong>" + Toronto.fileStructure + "</li><br/>" + "<li><strong>Metadata/Description of Data: </strong>" + Toronto.dataDescription + "</li><br/>" + "<li><strong>Open Data Civic Schema: </strong>" + Toronto.schema + "</li><br/>" + "<li><strong>Dataset(s) Source: </strong>" + Toronto.link + "</li>";
+								} else if (userCity == "City of Vancouver"){
+									cityDatasetInfo.innerHTML = "<br/><li><strong>Dataset Name: </strong>" + Vancouver.setName + "</li><br/>" + "<li><strong>File Format(s) & Structuration: </strong>" + Vancouver.fileStructure + "</li><br/>" + "<li><strong>Metadata/Description of Data: </strong>" + Vancouver.dataDescription + "</li><br/>" + "<li><strong>Open Data Civic Schema: </strong>" + Vancouver.schema + "</li><br/>" + "<li><strong>Dataset(s) Source: </strong>" + Vancouver.link + "</li>";
+								} else if (userCity == "City of Ottawa"){
+									cityDatasetInfo.innerHTML = "<br/><li><strong>Dataset Name: </strong>" + Ottawa.setName + "</li><br/>" + "<li><strong>Powered By: </strong>CKAN</strong></li><br/>" + "<li><strong>File Format(s) & Structuration: </strong>" + Ottawa.fileStructure + "</li><br/>" + "<li><strong>Metadata/Description of Data: </strong>" + Ottawa.dataDescription + "</li><br/>" + "<li><strong>Open Data Civic Schema: </strong>" + Ottawa.schema + "</li><br/>" + "<li><strong>Dataset(s) Source: </strong>" + Ottawa.link + "</li>";
+									// ADD CITY enter a new else if statement...
+									// IF ADDED NEW ROW then you must make sure to add the row info into each innerHTML here
+								} else {
+									cityDatasetInfo.innerHTML = "<br/><li><strong>Dataset Name: </strong>" + Edmonton.setName + "</li><br/>" + "<li><strong>Powered By: </strong>SOCRATA</strong></li><br/>" + "<li><strong>File Format(s) & Structuration: </strong>" + Edmonton.fileStructure + "</li><br/>" + "<li><strong>Metadata/Description of Data: </strong>" + Edmonton.dataDescription + "</li><br/>" + "<li><strong>Open Data Civic Schema: </strong>" + Edmonton.schema + "</li><br/>" + "<li><strong>Dataset(s) Source: </strong>" + Edmonton.link + "</li>";
+								} 
+							}
+						}	
+					} else { // If the domain the user selects is not equal to any of the domains in the Fusion Table
+						cityDatasetInfo.innerHTML = "<br/>" + "<strong>No dataset for this city. Please reselect.</strong>"; // Then there is no domain-specific dataset (e.g. Address points domain does not have any domain-specific datasets in the 'Adoption of OD Standards by Cities' Fusion Table)
+					}
+					
+					$('[data-toggle="tooltip"]').tooltip(); // This creates the pop-up info balloons
+					
+				}; 
+				
+				document.getElementById("cityComparison").onchange = function (e) { // When a user selects a dataset property, the following function will run 
+					
+					// The following 5 lines of code are the same variables as above
+					var userDomain = document.getElementById("datasetDomains").value; 
+					var userDatasetProperty = document.getElementById("cityComparison").value;
+					var userCity = document.getElementById("cityDatasets").value;
+					var cityComparisonsInfo = document.getElementById("cityComparisonInfo");
+					var domainInfo = "";
+					
+					var cityInfo = getCityInfo(data, userDomain, userCity);
+					var Surrey = cityInfo[0];
+					var Ottawa = cityInfo[1];
+					var Vancouver = cityInfo[3];
+					var Edmonton= cityInfo[4]; 
+					var Toronto = cityInfo[2]; 
+					// ADD CITY must include the city here
+
+					for (var i = 0; i < data.rows.length; i += 6){ 
+						if (data.rows[i][0] == userDomain){
+							domainInfo = userDomain; // Same as above, need to deal with closure
+						}
+					}
+					
+					if (domainInfo == userDomain) { // Accounts for closure, if the domain the user selected is equal to a domain that is shown in the Fusion Table		
+						for (var i = 0; i < data.rows.length; i += 6){
+							if (data.rows[i][0] == userDomain){ 
+								if (userDatasetProperty == "Dataset Name"){ // If the dataset property the user selected is the "Dataset Name", the output will be every cities' dataset name
+									cityComparisonsInfo.innerHTML = "<br/><li><strong>City of Surrey: </strong>" + Surrey.setName + "</li><br/><li><strong>City of Ottawa: </strong>" + Ottawa.setName + "</li><br/><li><strong>City of Toronto: </strong>" + Toronto.setName + "</li><br/><li><strong>City of Vancouver: </strong>" + Vancouver.setName + "</li><br/><li><strong>City of Edmonton: </strong>" + Edmonton.setName + "</li>";
+								} else if (userDatasetProperty == "File Format(s) & Structuration"){
+									cityComparisonsInfo.innerHTML = "<br/><p style='text-align: center;'><strong>Hover over the file images for structuration info</strong></p><li><strong>City of Surrey: </strong>" + Surrey.fileStructure + "</li><br/><li><strong>City of Ottawa: </strong>" + Ottawa.fileStructure + "</li><br/>" + "<li><strong>City of Toronto: </strong>" + Toronto.fileStructure + "</li><br/><li><strong>City of Vancouver: </strong>" + Vancouver.fileStructure + "</li><br/>" + "<li><strong>City of Edmonton: </strong>" + Edmonton.fileStructure + "</li>";
+								} else if (userDatasetProperty == "Metadata/Description of Data"){
+									cityComparisonsInfo.innerHTML = "<br/><li><strong>City of Surrey: </strong>" + Surrey.dataDescription + "</li><br/><li><strong>City of Ottawa: </strong>" + Ottawa.dataDescription + "</li><br/><li><strong>City of Toronto: </strong>" + Toronto.dataDescription + "</li><br/><li><strong>City of Vancouver: </strong>" + Vancouver.dataDescription + "</li><br/><li><strong>City of Edmonton: </strong>" + Edmonton.dataDescription + "</li>";
+								} else if (userDatasetProperty == "Open Data Civic Schema"){ 
+									cityComparisonsInfo.innerHTML = "<br/><li><strong>City of Surrey: </strong>" + Surrey.schema + "</li><br/><li><strong>City of Ottawa: </strong>" + Ottawa.schema + "</li><br/><li><strong>City of Toronto: </strong>" + Toronto.schema + "</li><br/><li><strong>City of Vancouver: </strong>" + Vancouver.schema + "</li><br/><li><strong>City of Edmonton: </strong>" + Edmonton.schema + "</li>";
+									// IF ADDED NEW ROW then add a new else statement with userDatasetProperty == "new row"
+									// ADD CITY then make sure to include in the innerHTML the new city
+								} else { // If the dataset property is the link to the dataste then output the dataset link
+									cityComparisonsInfo.innerHTML = "<br/><li><strong>City of Surrey: </strong>" + Surrey.link + "</li><br/><li><strong>City of Ottawa: </strong>" + Ottawa.link + "</li><br/><li><strong>City of Toronto: </strong>" + Toronto.link + "</li><br/><li><strong>City of Vancouver: </strong>" + Vancouver.link + "</li><br/><li><strong>City of Edmonton: </strong>" + Edmonton.link + "</li>";
+								}
+							}
+						}
+					} else { // If the domain the user selects is not equal to any of the domains in the Fusion Table
+						cityComparisonsInfo.innerHTML = "<br/>" + "<strong>No datasets for the selected domain. Please reselect.</strong>"; // Then there is no domain-specific dataset (e.g. Address points domain does not have any domain-specific datasets in the 'Adoption of OD Standards by Cities' Fusion Table)
+					}
+					
+					$('[data-toggle="tooltip"]').tooltip(); // This creates the pop-up info balloons
+					
+				};
+			});
+		});
+		
+		$(document).ready(function(){	
+			
+			$("#userFeedbackHeader").click(function () {
+				document.getElementById("userFeedback").style.display = "block";
+			})
+			
+			//The following rest of code was copied and modified from a Stackoverflow post: http://stackoverflow.com/questions/5004233/jquery-ajax-post-example-with-php/5004276#5004276 
+			
+			// Variable to hold request
+			var request;
+
+			// Bind to the submit event of our form
+			$("#userFeedback").submit(function(event){
+				
+				document.getElementById('feedbackFailure').style.display = "none";
+				document.getElementById('feedbackSuccess').style.display = "none";
+				document.getElementById('feedbackWarning').style.display = "none";
+				
+				
+				// Abort any pending request
+				if (request) {
+					request.abort();
+				}
+				// setup some local variables
+				var $form = $(this);
+				
+				// Let's select and cache all the fields
+				var $inputs = $form.find("feedback, contactInfo, userName");
+
+				// Serialize the data in the form
+				var serializedData = $form.serialize();
+
+				// Let's disable the inputs for the duration of the Ajax request.
+				// Note: we disable elements AFTER the form data has been serialized.
+				// Disabled form elements will not be serialized.
+				$inputs.prop("disabled", true);
+
+				// Fire off the request to the Feedback Google spreadsheet
+				request = $.ajax({
+					url: "https://script.google.com/macros/s/AKfycbxEgfDaHia2zOA6O1EsQBeimkUctBTR8gy7fggMx4IWW3-F8jI/exec",
+					type: "post",
+					data: serializedData
+				});
+
+				// Callback handler that will be called on success
+				request.done(function (response, textStatus, jqXHR){
+					// Log a message to the console
+					console.log("Hooray, it worked!");
+					if ($form[0][0].value == "") {
+					document.getElementById('feedbackWarning').style.display = "block";
+					} else {
+						document.getElementById('feedbackSuccess').style.display = "block";
+					}
+				});
+
+				// Callback handler that will be called on failure
+				request.fail(function (jqXHR, textStatus, errorThrown){
+					// Log the error to the console
+					console.error(
+						"The following error occurred: "+
+						textStatus, errorThrown
+					);
+					document.getElementById('feedbackFailure').style.display = "block";
+				});
+
+				// Callback handler that will be called regardless if the request failed or succeeded
+				request.always(function () {
+					// Reenable the inputs
+					$inputs.prop("disabled", false);
+				});
+
+				// Prevent default posting of form
+				event.preventDefault();
+			});
+		});
+
+    </script>
+
+</body>
+
+</html>
