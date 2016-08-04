@@ -1,0 +1,191 @@
+{
+  "name": "domains", 
+  "children": [
+	{
+		"title": "Annual Budget", 
+		"children": [
+			{
+				"title2": "Fiscal Data Package",
+				"children": [
+					{"name":"Fiscal Data Package", "size": 10000, "link":"http://fiscal.dataprotocols.org/spec/#overview"}
+				]
+			},
+			{
+				"title2": "Socrata's Operating Budget Schema",
+				"children": [
+					{"name":"Socrata's Operating Budget Schema", "size": 10000, "link": "https://docs.google.com/document/d/1KWPMeUzWJv8hmG6LBvHRXlm4hnxFYNxm_bNpetBvTeI/edit#"}
+				]
+			},
+			{
+				"title2": "Socrata's Capital Budget Schema",
+				"children": [
+					{"name":"Socrata's Capital Budget Schema", "size": 10000, "link": "https://support.socrata.com/hc/en-us/articles/215303918-Capital-Budget-Data-Schema"}
+				]
+			},
+			{
+				"title2": "Vocabulario para datos sobre presupuestos...",
+				"children": [
+					{"name":"Vocabulario para datos sobre presupuestos de entidades locales", "size": 15000, "link": "http://vocab.linkeddata.es/datosabiertos/def/hacienda/presupuestos.html"}
+				]
+			},
+			{
+				"title2": "Checkbook NYC",
+				"children": [
+					{"name": "Checkbook NYC", "size": 10000, "link": "https://github.com/NYCComptroller/Checkbook"}
+				]
+			}
+		]
+	},
+	{
+		"title": "Building Permits",
+		"children": [
+			{"name": "Building & Land Development Specification (BLDS)", "size": 10000, "link":"http://permitdata.org/"}
+		]
+	},
+	{
+		"title": "Crime Statistics", 
+		"children": [
+			{"name": "SPOTCrime Open Crime Standard (SOCS)", "size": 10000, "link":"https://github.com/spotcrimebrit/SpotCrime-Open-Crime-Data-Standard"}
+		]
+	},
+	{
+		"title": "Road Construction", 
+		"children": [
+			{"name": "Open511", "size": 10000, "link":"http://www.open511.org/documentation/1.0/guidelines.html"}
+		]
+	},
+	{
+		"title": "Zoning", 
+		"children": [
+			{
+				"title2": "MassGIS Datalayer De Facto Standard",
+				"children": [
+					{"name": "MassGIS Datalayer De Facto Standard", "size": 10000, "link":"http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/l3parcels.html"}
+				]
+			},
+			{
+				"title2": "Regional Land Information System (RLIS) Discovery",
+				"children": [
+					{"name": "Regional Land Information System (RLIS) Discovery", "size": 10000, "link":"http://rlisdiscovery.oregonmetro.gov/metadataviewer/display.cfm?meta_layer_id=416"}
+				]
+			},
+			{
+				"title2": "Land Based Classification Standards (LBCS) - OWL2",
+				"children": [
+					{"name": "Land Based Classification Standards (LBCS) - OWL2", "size": 10000, "link":"https://www.planning.org/lbcs/standards/function.htm"}
+				]
+			}
+		]
+	},
+	{
+		"title": "Service Requests", 
+		"children": [
+			{"name": "Open311: GeoReport V2 API", "size": 10000, "link":"http://wiki.open311.org/GeoReport_v2/"}
+		]
+	},
+	{
+		"title": "Public Facilities", 
+		"children": [
+			{"name": "Open311: Inquiry Draft API", "size": 10000, "link":"http://wiki.open311.org/Inquiry_v1/"}
+		]
+	},
+	{
+		"title": "Food Safety", 
+		"children": [
+			{"name": "Local Inspector Value-Entry Specification (LIVES)", "size": 10000, "link":"http://www.yelp.com/healthscores"}
+		]
+	},
+	{	
+		"title": "Address Points", 
+		"children": [
+			{"name": "OpenAddress Specification", "size": 10000, "link": "https://openaddresses.io/"}
+		]	
+	},
+	{
+		"title": "Procurement Contracts", 
+		"children": [
+			{
+				"title2": "Open Contracting Data Standards",
+				"children": [
+					{"name": "Open Contracting Data Standards", "size": 10000, "link":"http://standard.open-contracting.org/latest/en/"}
+				]
+			},
+			{
+				"title2": "Checkbook NYC",
+				"children": [
+					{"name": "Checkbook NYC", "size": 10000, "link":"https://github.com/NYCComptroller/Checkbook"}
+				]
+			}
+		]
+	},
+	{
+		"title": "Real-Time Transit", 
+		"children": [
+			{
+				"title2": "General Transit Feed Specification (GTFS)",
+				"children": [
+					{"name": "General Transit Feed Specification (GTFS)", "size": 10000, "link":"https://developers.google.com/transit/gtfs/reference"}
+				]
+			},
+			{
+				"title2": "Service Interface for Real-Time Information (SIRI)",
+				"children": [
+					{"name": "Service Interface for Real-Time Information (SIRI)", "size": 10000, "link":"http://user47094.vs.easily.co.uk/siri/"}
+				]
+			}
+		]
+	},
+	{
+		"title": "Expenditure", 
+		"children": [
+			{
+				"title2": "Local Government Transparency Code",
+				"children": [
+					{"name": "Local Government Transparency Code", "size": 10000, "link": "http://www.local.gov.uk/practitioners-guides-to-publishing-data"}
+				]
+			},
+			{
+				"title2": "Checkbook NYC",
+				"children": [
+					{"name": "Checkbook NYC", "size": 10000, "link":"https://github.com/NYCComptroller/Checkbook"}
+				]
+			}
+		]
+	},
+	{
+		"title": "Election Results", 
+		"children": [
+			{
+				"title2": "Open Election Data Specification V2",
+				"children": [
+					{"name": "Open Election Data Specification V2", "size": 10000, "link":"http://docs.openelections.net/"}
+				]
+			},
+			{
+				"title2": "Election Data Format",
+				"children": [
+					{"name": "Election Data Format", "size": 10000, "link":"https://github.com/theodi/election-data-format/blob/gh-pages/README.md"}
+				]
+			},
+			{
+				"title2": "Election Markup Language (EML)",
+				"children": [
+					{"name": "Election Markup Language (EML)", "size": 10000, "link":"http://docs.oasis-open.org/election/eml/v7.0/cs01/eml-v7.0-cs01.html"}
+				]
+			},
+			{
+				"title2": "NIST's Common Election Format Project",
+				"children": [
+					{"name": "NIST's Common Election Format Project", "size": 10000, "link":"http://www.nist.gov/itl/vote/election-results.cfm"}
+				]
+			},
+			{
+				"title2": "Voting Information Project (VIP) Specification",
+				"children": [
+					{"name": "Voting Information Project (VIP) Specification", "size": 10000, "link":"http://vip-specification.readthedocs.io/en/vip5/"}
+				]
+			}
+		]	
+	}
+  ]
+}

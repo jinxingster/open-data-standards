@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<!-- Got code from: http://bl.ocks.org/mbostock/7607535 -->
+
+<head>
+	<meta charset="utf-8">
+	
+	<!--ajax for posting feedback-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<style>
+		.standard {
+			cursor: pointer;
+			font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		
+		.node {
+		  cursor: pointer;
+		  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		.node:hover {
+		  stroke: #000;
+		  stroke-width: 1.5px;
+		}
+
+		.node--leaf {
+		  fill: white;
+		}
+
+		.label {
+		  font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  text-anchor: middle;
+		  //text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+		}
+		
+		.label,
+		.node--root,
+		.node--leaf {
+		 pointer-events: none;
+		}
+	</style>
+	
+	<div id="domainStorage" style="display: none">Domain is stored here</div>
+	
+</head>
+
+<body align="center" id="test">
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+	var margin = 10,
+		diameter = 440;
+
+	var color = d3.scale.linear()
+		.domain([-1, 5])
+		.range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+		.interpolate(d3.interpolateHcl);
+
+	var pack = d3.layout.pack()
+		.padding(5)
+		.size([1000, 700])
+		.value(function(d) { return d.size; })
+
+	var svg = d3.select("body").append("svg")
+		.attr("width", diameter)
+		.attr("height", diameter)
+		.attr("align", "center")
+		.attr("id", "circlePacking")
+	  .append("g")
+		.attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+	d3.json("standards.json", function(error, root) {
+		if (error) throw error;
+
+		var focus = root,
+			nodes = pack.nodes(root),
+			view;
+
+		var circle = svg.selectAll("circle")
+			.data(nodes)
+			.enter().append("circle")
+				.attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+				.style("fill", function(d) { return d.children ? color(d.depth) : null; }) // Change null to something else... metric?
+				.on("click", function(d) { if (focus !== d || (focus !== "text")) zoom(d), d3.event.stopPropagation(); });
+
+		var text = svg.selectAll("text")
+			.data(nodes)
+			.enter().append("text")
+				.attr("class", "standard")
+				.attr("text-anchor", "middle")
+				.attr("font-size", "12px")
+				.attr("alignment-baseline", "hanging")
+				.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+				.style("display", function(d) { return d.parent === root ? "inline" : "block"; })
+				.on("click", function(d) {
+					window.open(
+						d.link,
+						'_blank' // <- This is what makes it open in a new window.
+					);
+				})
+				.text(function(d) { return d.name;}); // This is where I can add text about the standard
+
+		var text2 = svg.selectAll("title")
+			.data(nodes)
+			.enter().append("text")
+				.attr("class", "label")
+				.attr("text-anchor", "middle")
+				.attr("font-size", "12px")
+				.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+				.style("display", function(d) { return d.parent === root ? "inline" : "block"; })
+				.text(function(d) {return d.title;}); // This is where I can add text about the standard
+	
+		var text3 = svg.selectAll("title2")
+			.data(nodes)
+			.enter().append("text")
+				.attr("class", "label")
+				.attr("text-anchor", "middle")
+				.attr("font-size", "12px")
+				.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+				.style("display", function(d) { return d.parent === root ? "inline" : "block"; })
+				.text(function(d) { return d.title2;}); // This is where I can add text about the standard
+
+		var node = svg.selectAll("text,circle")
+			.attr("align", "center");
+
+		d3.select("body")
+			.style("background", "#FFFFFF")
+			.on("click", function() { zoom(root); });
+
+		zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+		function zoom(d) {
+			var focus0 = focus; focus = d;
+
+			var transition = d3.transition()
+				.duration(d3.event.altKey ? 7500 : 750)
+				.tween("zoom", function(d) {
+					var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+					return function(t) { zoomTo(i(t)); };
+				});
+		
+			var userDomain = focus.title;
+			var userDomainStore; 
+			var userStandard = focus.children.name;
+			var userStandardStore;
+		
+			if (typeof userDomain !== "undefined"){ 
+				userDomainStore = focus.title;
+				console.log(userDomainStore); // Shows what domain the user selects
+				var storeDomain = document.getElementById("domainStorage"); 
+				storeDomain.innerHTML = userDomainStore;
+			}
+		
+			transition.selectAll("text")
+				.filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+					.style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+					.each("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+					.each("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+		}	
+
+		function zoomTo(v) {
+			var k = diameter / v[2]; view = v;
+			node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+			circle.attr("r", function(d) { return d.r * k; });
+		}
+	 
+		// Copied the following code from: http://bl.ocks.org/mbostock/7555321
+	
+		wrap(text2, 75) // Breaks the texts for the domain titles
+		wrap(text3, 150) // Breaks the text for the clickable standard titles
+		wrap(text, 200) // Breaks the text for the standard titles
+	  
+		function wrap(text, width) {
+			text.each(function() {
+				var text = d3.select(this),
+					words = text.text().split(/\s+/).reverse(),
+					word,
+					line = [],
+					lineNumber = 0,
+					lineHeight = 1.1, // ems
+					y = text.attr("y"),
+					dy = parseFloat(text.attr("dy")),
+					tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+				while (word = words.pop()) {
+					line.push(word);
+					tspan.text(line.join(" "));
+					if (tspan.node().getComputedTextLength() > width) {
+						line.pop();
+						tspan.text(line.join(" "));
+						line = [word];
+						tspan = text.append("tspan").attr("x", 0).attr("y", 10).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word); // Code was not working, so instead of having "y" set to y, it was set to 10
+					}
+				}
+			});
+		}  
+	});
+</script>
